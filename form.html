@@ -1,0 +1,117 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+        $(document).ready(function() {
+        $('select').material_select();
+        });
+      </script>
+	  <nav>
+    <div class="nav-wrapper">
+		<a href="/" class="brand-logo">Logo</a>
+		<ul id="dropdown1" class="dropdown-content">
+			<li><a href="#!">Form</a></li>
+			<li class="divider"></li>
+			<li><a href="form">Apply online</a></li>
+		</ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		<li><a class='dropdown-button' data-beloworigin="true" href="#!" data-activates="dropdown1">Camperships<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a href="badges.html">Camps</a></li>
+		<li><a href="badges.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div class = "container">
+	  <div class="row">
+		<form class="col s12">
+		  <div class="row">
+			<div class="input-field col s6">
+			  <input id="first_name" type="text" class="validate">
+			  <label for="first_name">Scout first name</label>
+			</div>
+			<div class="input-field col s6">
+			  <input id="last_name" type="text" class="validate">
+			  <label for="last_name">Scout last Name</label>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="input-field col s12">
+			  <input id="password" type="text" class="validate">
+			  <label for="password">address</label>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="input-field col s12">
+			  <input id="email" type="email" class="validate">
+			  <label for="email">Email</label>
+			</div>
+		  </div>
+      <div class="row">
+      <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Choose your option</option>
+        <option value="Crew">Bronx</option>
+        <option value="Pack">Brooklyn</option>
+        <option value="Troop">Manhattan</option>
+        <option value="Troop">Queens</option>
+        <option value="Troop">Staten Island</option>
+      </select>
+      <label>Borough</label>
+      </div>
+      </div>
+      <div class="row">
+      <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Choose your option</option>
+        <option value="Crew">Breukelen</option>
+        <option value="Pack">Lenape Bay</option>
+      </select>
+      <label>District</label>
+      </div>
+      </div>
+      <div class="row">
+      <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Choose your option</option>
+        <option value="Crew">Founders</option>
+        <option value="Pack">Pathfinder</option>
+        <option value="Pack">Tomahawk</option>
+      </select>
+      <label>District</label>
+      </div>
+      </div>
+      <div class="row">
+      <div class="input-field col s12">
+      <select>
+        <option value="" disabled selected>Choose your option</option>
+        <option value="Crew">Crew</option>
+        <option value="Pack">Pack</option>
+        <option value="Pack">Ship</option>
+        <option value="Troop">Troop</option>
+      </select>
+      <label>Unit Type</label>
+      </div>
+      </div>
+      <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="text" class="validate">
+        <label for="email">Unit Number</label>
+      </div>
+      </div>
+		</form>
+	  </div>
+    </body>
+  </html>
