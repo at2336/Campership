@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
+    <body style="background-color: 151515">
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -61,6 +61,18 @@
         // Destroy sideNav
         $('.button-collapse').sideNav('destroy');
 
+        $("#next").click(function () {
+          var current = $(".qn:visible"),
+          total = $(".qn").length,
+          last = $(".qn:last");
+          $(current).next().show();
+          $(current).hide();
+          if ($(current).next().is(last)) {//check if it is last question
+            $("#next").hide();
+            $("input[type='submit']").show();
+            }
+        });
+
       </script>
 	  <nav>
       <div class="nav-wrapper; hide-on-med-and-down">
@@ -92,65 +104,68 @@
 
     </nav>
     <div class = "container">
-    <div>
-    2017 Campership Application:
-    Dear Parent/Scout Leader:
+    <div style="padding-top: 3%">
+    2017 Campership Application:<br/>
+    Dear Parent/Scout Leader:<br/><br/>
 
-    • Greater New York Councils offers camperships to registered youth from New York City to assist with camp fees. Campership amounts are based on amount requested and family need. In some cases, depending on speciﬁc circumstances, no campership may be awarded.
+    Greater New York Councils offers camperships to registered youth from New York City to assist with camp fees. Campership amounts are based on amount requested and family need. In some cases, depending on speciﬁc circumstances, no campership may be awarded.<br/><br/>
 
-    • This form must be completely ﬁlled out. 
+    This form must be completely ﬁlled out. <br/><br/>
 
-    • Total yearly income must reflect all household family members. Please include all types of household income: salary, unemployment insurance, pensions, alimony, disability, public assistance, SNAP, earned income tax credit, etc.
-    • A $25 per camper, per session/week deposit must be paid for this application to be considered.
+    Total yearly income must reflect all household family members. Please include all types of household income: salary, unemployment insurance, pensions, alimony, disability, public assistance, SNAP, earned income tax credit, etc.
+    A $25 per camper, per session/week deposit must be paid for this application to be considered.<br/>
 
-    • To accurately credit the unit with the camper’s awarded amount, the council, district, and pack/troop information must be completed.
+    To accurately credit the unit with the camper’s awarded amount, the council, district, and pack/troop information must be completed.<br/><br/>
 
-    • Cub Scouts who are crossing over to Boy Scouts must indicate their new troop and the troop they will be attending camp with. Submit camper’s transfer information to the GNYC ofﬁce on time to avoid confusion in locating camper with the appropriate unit.
+    Cub Scouts who are crossing over to Boy Scouts must indicate their new troop and the troop they will be attending camp with. Submit camper’s transfer information to the GNYC ofﬁce on time to avoid confusion in locating camper with the appropriate unit.<br/><br/>
 
-    • Camperships awarded will be based on the Early Bird cost. No consideration will be given for the higher fee charged after May 31st.
+    Camperships awarded will be based on the Early Bird cost. No consideration will be given for the higher fee charged after May 31st.<br/><br/>
 
-    • If a Scout receives multiple camperships, the total cannot exceed the cost of camp, less the $25 deposit. If a Scout’s total camperships exceed this amount, the GNYC campership will be reduced accordingly.
+    If a Scout receives multiple camperships, the total cannot exceed the cost of camp, less the $25 deposit. If a Scout’s total camperships exceed this amount, the GNYC campership will be reduced accordingly.<br/><br/>
 
-    • Any awarded campership amount is included and deducted from the total camp cost of fees due by May 31st. All campers who have not received camperships by May 31st will be responsible for full payment. Reimbursement, if any will be provided in a pack/troop check, typically while unit is at camp (if no discrepancies are found). We do not make checks out to individuals (except for youth attending an individual specialty camp). Please keep track of payments by individual parents for their reimbursement from the pack/troop check.
+    Any awarded campership amount is included and deducted from the total camp cost of fees due by May 31st. All campers who have not received camperships by May 31st will be responsible for full payment. Reimbursement, if any will be provided in a pack/troop check, typically while unit is at camp (if no discrepancies are found). We do not make checks out to individuals (except for youth attending an individual specialty camp). Please keep track of payments by individual parents for their reimbursement from the pack/troop check.<br/><br/>
     </div>
+    </div>
+
+    <div class = "container" id ="page1">
 	  <div class="row">
 		<form class="col s12">
 		  <div class="row">
 			<div class="input-field col s6">
-			  <input id="first_name" type="text" required>
-			  <label for="first_name">Scout first name</label>
+			  <input id="Scout_first_name" type="text" required>
+			  <label for="scout_first_name">Scout first name</label>
 			</div>
 
 			<div class="input-field col s6">
-			  <input id="last_name" type="text" required>
-			  <label for="last_name">Scout last Name</label>
+			  <input id="scout_last_name" type="text" required>
+			  <label for="scout_last_name">Scout last Name</label>
 			</div>
 		  </div>
 
 		  <div class="row">
 			<div class="input-field col s12">
-			  <input id="address" type="text" required>
-			  <label for="address">Address</label>
+			  <input id="scout_address" type="text" required>
+			  <label for="scout_address">Address</label>
 			</div>
 		  </div>
 
 		  <div class="row">
 			<div class="input-field col s12">
-			  <input id="email" type="email" class="validate" required>
-			  <label for="email">Email</label>
+			  <input id="scout_email" type="email" class="validate" required>
+			  <label for="scout_email">Email</label>
 			</div>
 		  </div> 
 
       <div class="row">
       <div class="col s12">
       <label>Date of Birth</label>
-      <input type="date" class="datepicker" id = "birthdate" required>
+      <input type="date" class="datepicker" id = "scout_birthdate" required>
       </div>
       </div>
 
       <div class="row">
       <div class="input-field col s12">
-        <input id="phone" type="number" placeholder="212-242-1100" required>
+        <input id="scout_phone" type="number" placeholder="212-242-1100" required>
         <label for="phone">Phone Number</label>
       </div>
       </div>
@@ -223,9 +238,27 @@
         <label for="otherUnit">Other unit</label>
       </div>
       </div>
-
 		</form>
-
 	  </div>
+    </div>
+
+    <div class="container" id="page2" style="display:none">
+    <div class="row">
+    <form class="col s12">
+      <div class="row">
+      <div class="input-field col s6">
+        <input id="parent_first_name" type="text" required>
+        <label for="parent_first_name">Parent first name</label>
+      </div>
+
+      <div class="input-field col s6">
+        <input id="parent_last_name" type="text" required>
+        <label for="parent_last_name">Parent last name</label>
+      </div>
+      </div>
+    </form>
+    </div>
+    </div>
+
     </body>
   </html>
