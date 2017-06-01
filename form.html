@@ -73,6 +73,26 @@
             }
         });
 
+        $(document).ready(function() {
+        $('#Borough').on('change', function() {
+        if ( this.value == 'Brooklyn')
+          {
+            document.getElementById('BKDistrict').style.display="";
+            document.getElementById('QueensDistrict').style.display="none";
+          }
+          else if(this.value == 'Queens')
+          {
+            document.getElementById('QueensDistrict').style.display="";
+            document.getElementById('BKDistrict').style.display="none";
+          }
+          else
+          {
+            document.getElementById('BKDistrict').style.display="none";
+            document.getElementById('QueensDistrict').style.display="none";
+          }
+        });
+        });
+
       </script>
 	  <nav>
       <div class="nav-wrapper; hide-on-med-and-down">
@@ -128,7 +148,7 @@
     </div>
 
     <div class = "container" id ="page1">
-	  <div class="row">
+	  <div class="row"">
 		<form class="col s12">
 		  <div class="row">
 			<div class="input-field col s6">
@@ -202,7 +222,7 @@
         <option value="Founders">Founders</option>
         <option value="Pathfinder">Pathfinder</option>
         <option value="Tomahawk">Tomahawk</option>
-      </select>
+      </select>y
       <label>District</label>
       </div>
       </div>
@@ -240,10 +260,8 @@
       </div>
 		</form>
 	  </div>
-    </div>
 
-    <div class="container" id="page2" style="display:none">
-    <div class="row">
+    <div class="row" id = "page2" style="display:none">
     <form class="col s12">
       <div class="row">
       <div class="input-field col s6">
@@ -258,7 +276,18 @@
       </div>
     </form>
     </div>
-    </div>
 
+    </div>
+    <div class="center-align">
+    <ul class="pagination">
+      <li class="waves-effect" id = "previousPage"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="waves-effect" id = "firstPage"><a href="#!">1</a></li>
+      <li class="waves-effect" id = "secondPage"><a href="#!">2</a></li>
+      <li class="waves-effect" id = "thirdPage"><a href="#!">3</a></li>
+      <li class="waves-effect" id = "fourthPage"><a href="#!">4</a></li>
+      <li class="waves-effect" id = "fifthPage"><a href="#!">5</a></li>
+      <li class="waves-effect" id = "nextPage"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+    </div>
     </body>
   </html>
